@@ -1,0 +1,86 @@
+.labelRadio {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  p {
+    font-weight: 500;
+    font-size: 14px;
+    color: $color-text;
+    line-height: 22px;
+  }
+}
+
+/* Hide the browser's default checkbox */
+label.labelRadio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark_radio {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: transparent;
+  border: 1px solid #e0e2e8;
+  &:disabled,
+  &_disabled {
+    border: 1px solid #e0e2e8;
+    background-color: #f8f8fa;
+  }
+  border-radius: 50%;
+}
+
+/* On mouse-over, background color */
+.labelRadio:hover input ~ .checkmark_radio {
+  border: 1px solid #cdcfd3;
+}
+
+/* When the checkbox is checked, add  background */
+.labelRadio input:checked ~ .checkmark_radio {
+  background-color: $color-primary;
+}
+
+.labelRadio input:checked ~ .checkmark_radio_disabled {
+  border: 1px solid #e0e2e8;
+  background-color: #f8f8fa;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark_radio:after {
+  content: "";
+  position: absolute;
+  background: url("../icons/radio-dot.svg") center center / cover no-repeat;
+  width: 6px;
+  height: 6px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+.checkmark_radio_disabled::after {
+  background: url("../icons/radio-dot-disabled.svg") center center / cover
+    no-repeat;
+}
+
+/* Show the checkmark when checked */
+.labelRadio input:checked ~ .checkmark_radio:after {
+  display: block;
+}
+
+.labelRadio input:checked ~ .checkmark_radio {
+  border: none;
+}
