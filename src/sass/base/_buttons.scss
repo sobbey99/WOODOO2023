@@ -1,0 +1,38 @@
+.button {
+  background-color: $color-primary;
+  color: #fff;
+  width: 280px;
+  height: 60px;
+  border-radius: 60px;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 22px;
+  letter-spacing: 1.4px;
+  cursor: pointer;
+  &-cart {
+    gap: 30px;
+    .counter {
+      display: flex;
+      gap: 15px;
+    }
+  }
+
+  &-white {
+    background-color: #fff;
+    color: #222730;
+    border: 1px solid $color-light-lines;
+    &:hover {
+      background-color: $color-light-lines;
+    }
+  }
+  &:disabled {
+    background-color: $color-light-lines;
+    color: #72716e;
+  }
+}
