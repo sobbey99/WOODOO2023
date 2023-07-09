@@ -1,0 +1,28 @@
+.tabs {
+  border-top: 1px solid $color-divider;
+  border-bottom: 1px solid $color-divider;
+  display: flex;
+  width: fit-content;
+  &-item {
+    cursor: pointer;
+    width: 360px;
+    height: 80px;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $color-text-secondary;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 1.4px;
+    line-height: 16px;
+    border-right: 1px solid $color-light-lines;
+    &_active {
+      background-color: $color-bg;
+      color: $color-text;
+    }
+    &:hover {
+      color: $color-text;
+    }
+  }
+}
