@@ -1,0 +1,33 @@
+.iconbtn {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  color: $color-text-secondary;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  .text {
+    color: inherit;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: 1.4px;
+    line-height: 21.3px;
+  }
+  &.active {
+    &:hover {
+      color: $color-text;
+      svg,
+      path {
+        fill: $color-text;
+      }
+    }
+  }
+  &:disabled {
+    opacity: 0.5;
+  }
+}
+
+// .iconbtn:hover ~ svg {
+// visibility: hidden;
+// }
