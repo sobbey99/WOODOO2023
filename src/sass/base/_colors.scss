@@ -1,0 +1,36 @@
+/*Primary colors*/
+
+// brand colors
+$color-primary: #cf4f4c; //the main corporate color
+
+// auxiliary colors
+$color-light-lines: #eceae7; //for lines, inactive elements
+$color-bg: #f5f3f0; //grey background
+
+//Colors of hovers and clicks
+$color-hover: #cf4f4c; //hover color , Guidance
+$color-click: #cf4f4c; //click color , used in radio buttons
+$color-press: #000000; //press color , When clicking on dark links
+
+/*Text*/
+// primary colors
+$color-text: #1e1e1e; //the main color of the text - we use it to type all the text that looks like black
+$color-text-secondary: #72716e; //color for all signatures in the interface
+
+//links
+$color-link: #cf4f4c; //link color
+
+/*Icons*/
+// primary colors
+$color-icon: #2c2d2e; //the main color of the icons in the interface
+$color-icon-secondary: #bfc0c7; //color of secondary icons
+
+/*Separators and strokes*/
+// Separators
+$color-divider: #eceae7; //color for dividers
+
+/*Shadow*/
+// Main
+@mixin shadow-depth {
+  box-shadow: 0px 4px 24px 0px rgba(46, 67, 108, 0.15);
+}
