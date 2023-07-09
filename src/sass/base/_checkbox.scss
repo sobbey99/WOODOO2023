@@ -1,5 +1,5 @@
 /* Customize the label (the container) */
-.container {
+label.labelCheckbox {
   display: block;
   position: relative;
   padding-left: 35px;
@@ -10,10 +10,16 @@
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  p {
+    font-weight: 500;
+    font-size: 14px;
+    color: $color-text;
+    line-height: 22px;
+  }
 }
 
 /* Hide the browser's default checkbox */
-.container input {
+label.labelCheckbox input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -24,7 +30,8 @@
 /* Create a custom checkbox */
 .checkmark {
   position: absolute;
-  top: 0;
+  top: 50%;
+  transform: translateY(-50%);
   left: 0;
   height: 20px;
   width: 20px;
@@ -39,16 +46,16 @@
 }
 
 /* On mouse-over, background color */
-.container:hover input ~ .checkmark {
+.labelCheckbox:hover input ~ .checkmark {
   border: 1px solid #cdcfd3;
 }
 
 /* When the checkbox is checked, add  background */
-.container input:checked ~ .checkmark {
+.labelCheckbox input:checked ~ .checkmark {
   background-color: $color-primary;
 }
 
-.container input:checked ~ .checkmark_disabled {
+.labelCheckbox input:checked ~ .checkmark_disabled {
   border: 1px solid #e0e2e8;
   background-color: #f8f8fa;
 }
@@ -72,10 +79,10 @@
 }
 
 /* Show the checkmark when checked */
-.container input:checked ~ .checkmark:after {
+.labelCheckbox input:checked ~ .checkmark:after {
   display: block;
 }
 
-.container input:checked ~ .checkmark {
+.labelCheckbox input:checked ~ .checkmark {
   border: none;
 }
